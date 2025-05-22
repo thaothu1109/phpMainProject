@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 col-md-4 col-sm-3 hidden-xs">
-            <div class="side-banner"><img src="{{ asset('frontend/images/side-banner.jpg') }}"
+            <div class="side-banner"><img src="{{ asset('frontend/images/aabout.jpg') }}"
                     alt="banner"></div>
         </div>
         <div class="col-md-9 col-sm-9 col-xs-12 home-slider">
@@ -42,11 +42,11 @@
                     <div class="row">
                         <div class="col-lg-5 col-sm-5">
                             <a href="#"><img alt=""
-                                    src="{{ asset('frontend/images/sale.jpg') }}"></a>
+                                    src="{{ asset('frontend/images/anh4.png') }}"></a>
                         </div>
                         <div class="col-lg-7 col-sm-7">
                             <a href="#"><img alt=""
-                                    src="{{ asset('frontend/images/sale3.jpg') }}"></a>
+                                    src="{{ asset('frontend/images/banner1.png') }}"></a>
                         </div>
                     </div>
                 </div>
@@ -530,28 +530,24 @@
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="item active"> <img
-                                                src="{{ asset('frontend/images/mot.jpg') }}"
+                                                src="{{ asset('/frontend/images/auth.jpg') }}"
                                                 alt="slide3">
-                                            <div class="carousel-caption"> <span>Mega Deal</span>
-                                                <p>Save up to <strong>70% OFF</strong> Fahion collection</p>
+                                            <div class="carousel-caption" style="color: black;">
+                                              <span>Mega Deal</span>
+                                              <p>Save up to <strong>20% OFF</strong> Legend Roman</p>
                                             </div>
                                         </div>
+
                                         <div class="item"> <img
-                                                src="{{ asset('frontend/images/hai.jpg') }}"
+                                                src="{{ asset('frontend/images/about.jpg') }}"
                                                 alt="slide2">
-                                            <div class="carousel-caption"> <span>Huge
+                                            <div class="carousel-caption" style="color: black;"> 
+                                                <span>Coffee
                                                     <strong>sale</strong></span>
-                                                <p>Save up to <strong>70% OFF</strong> Balo collection</p>
+                                                
                                             </div>
                                         </div>
-                                        <div class="item"> <img
-                                                src="{{ asset('frontend/images/ba.jpg') }}"
-                                                alt="slide1">
-                                            <div class="carousel-caption"> <span>Hot
-                                                    <strong>Deal</strong></span>
-                                                <p>Save up to <strong>40% OFF</strong> Balo collection</p>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                     <a class="left carousel-control" href="#" data-slide="prev"> <span
                                             class="sr-only">Previous</span> </a>
@@ -654,33 +650,33 @@
                                         <div class="thumb"> <img
                                                 src="{{ asset('frontend/images/member1.jpg') }}"
                                                 alt="testimonials img" width="100px" height="100px"> </div>
-                                        <p>Wow, tôi không thể không khen shop balo này! Tôi đã có trải nghiệm mua sắm tuyệt vời tại đây. Sự đa dạng và phong cách của sản phẩm thật sự đáng ngạc nhiên. Chất liệu cao cấp và thiết kế tinh tế làm cho từng món đồ trở nên độc đáo và phong cách. .</p>
+                                        <p>Wow, tôi không thể không khen quán cà phê này! Tôi đã có trải nghiệm thưởng thức tuyệt vời tại đây. Sự đa dạng và phong cách của thức uống thật sự đáng ngạc nhiên. Nguyên liệu cao cấp và cách pha chế tinh tế làm cho từng ly cà phê trở nên độc đáo và phong cách.</p>
                                         <div class="line"></div>
-                                        <strong class="name">Minh Tâm</strong>
+                                        <strong class="name">Đức Hiền</strong>
                                     </div>
                                     <div class="holder">
                                         <div class="thumb"> <img
                                                 src="{{ asset('frontend/images/member2.jpg') }}"
                                                 alt="testimonials img"> </div>
-                                        <p>Nhân viên phục vụ rất tận tâm và nhiệt tình, họ đã giúp tôi tìm kiếm những chiếc balo phù hợp với gu thẩm mỹ của mình. Đặc biệt, dịch vụ giao hàng nhanh chóng và đáng tin cậy.</p>
+                                        <p>Nhân viên phục vụ rất tận tâm và nhiệt tình, họ đã giúp tôi chọn được món đồ uống hợp với khẩu vị của mình. Đặc biệt, không gian quán thoáng đãng và dịch vụ phục vụ nhanh chóng, đáng tin cậy.</p>
                                         <div class="line"></div>
-                                        <strong class="name">Mai Linh</strong>
+                                        <strong class="name">Thảo Thu</strong>
                                     </div>
                                     <div class="holder">
                                         <div class="thumb"> <img
                                                 src="{{ asset('frontend/images/member3.jpg') }}"
                                                 alt="testimonials img"> </div>
-                                        <p>Tôi muốn chia sẻ rằng tôi đã có một trải nghiệm mua sắm tuyệt vời tại shop balo này. Những mẫu balo tại đây không chỉ đa dạng về kiểu dáng mà còn rất phong cách. Chất liệu tốt và cắt may tỉ mỉ,.</p>
+                                        <p>Tôi muốn chia sẻ rằng tôi đã có một trải nghiệm thư giãn tuyệt vời tại quán cà phê này. Các món đồ uống ở đây không chỉ đa dạng về hương vị mà còn rất phong cách. Nguyên liệu chất lượng và pha chế tỉ mỉ,.</p>
                                         <div class="line"></div>
-                                        <strong class="name">John Doe</strong>
+                                        <strong class="name">Hồng Nhung</strong>
                                     </div>
                                     <div class="holder">
                                         <div class="thumb"> <img
                                                 src="{{ asset('frontend/images/member4.jpg') }}"
                                                 alt="testimonials img"> </div>
-                                        <p>Nhân viên đã tư vấn rất tận tâm, giúp tôi chọn lựa những chiếc balo phù hợp với phong cách và kích cỡ của mình. Điều đó thực sự làm tôi cảm thấy thoải mái và tự tin khi mặc những sản phẩm từ shop..</p>
+                                        <p>Nhân viên đã tư vấn rất tận tâm, giúp tôi chọn lựa món đồ uống phù hợp với khẩu vị và sở thích của mình. Điều đó thực sự làm tôi cảm thấy thoải mái và hài lòng khi thưởng thức tại quán.</p>
                                         <div class="line"></div>
-                                        <strong class="name">Stephen Doe</strong>
+                                        <strong class="name">Thị Thắm</strong>
                                     </div>
                                 </div>
                             </div>
@@ -689,10 +685,10 @@
                 </div>
                 <div class="featured-add-box">
                     <div class="featured-add-inner">
-                        <a href="#"> <img src="{{ asset('frontend/images/ads2.jpg') }}" alt="f-img"></a>
-                        <div class="banner-content">
-                            <div class="banner-text">Womens</div>
-                            <div class="banner-text1">49% off</div>
+                        <a href="#"> <img src="{{ asset('frontend/images/5.td.jpg') }}" alt="f-img"></a>
+                        <div class="banner-content" >
+                            
+                            <div class="banner-text1">20% off</div>
                             <p>on selected products</p>
                             <a href="#" class="view-bnt">Shop now</a>
                         </div>
@@ -714,34 +710,34 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="entry-thumb image-hover2">
                         <a href="#"> <img alt="Blog"
-                                src="{{ asset('frontend/images/anh1.jpg') }}" width="550px" height="255.46px"> </a>
+                                src="{{ asset('frontend/images/4.1.jpg') }}" width="550px" height="255.46px"> </a>
                     </div>
                     <div class="blog-preview_info">
-                    <h4 class="blog-preview_title"><a href="#">Review balo laptop HGFD 13h</a></h4>
+                    <h4 class="blog-preview_title"><a href="#">Cà phê và Bố</a></h4>
                          <ul class="post-meta">
-                             <li><i class="fa fa-user"></i>được đăng bởi <a href="#">admin</a></li>
+                             <li><i class="fa fa-user"></i>được đăng bởi <a href="#">Hien</a></li>
                              <li><i class="fa fa-comments"></i><a href="#">8 nhận xét</a></li>
                              <li><i class="fa fa-clock-o"></i><span class="day">12</span> <span
                                      class="tháng">Tháng hai</span></li>
                          </ul>
-                         <div class="blog-preview_desc">Cùng với đó là những chiếc balo laptop nhỏ gọn được khách hàng lựa chọn hàng ngày. Một trong những ưu điểm nổi bật nhất của balo laptop 13 inch là thiết kế nhỏ gọn và thân thiện. Sau đây, KOS sẽ review balo laptop dưới 10 triệu thật chi tiết cho các bạn dễ dàng lựa chọn.</div>
+                         <div class="blog-preview_desc">Phải nói ngay rằng, tôi không ‘ghiền’ cà phê, theo nghĩa, buổi sáng chưa có ‘giọt’ nào thì người bải hoải, đầu óc trống rỗng, làm gì cũng không ra hồn, hay thậm chí chân tay run rẩy, ngồi đâu ngáp đó…. Tôi chỉ thích cà phê, mà cụ thể là thích ngửi cái mùi thơm thơm của nó, vốn không giống bất kỳ mùi gì trên thế gian này.</div>
                          <a class="blog-preview_btn" href="#">ĐỌC THÊM</a>
                      </div>
                  </div>
                  <div class="col-lg-6 col-md-6 col-sm-6">
                      <div class="entry-thumb image-hover2">
                          <a href="#"> <img alt="Blog"
-                         src="{{ asset('frontend/images/anh4.jpg') }}" width="550px" height="255.46px"> </a>
+                         src="{{ asset('frontend/images/2.3.jpg') }}" width="550px" height="255.46px"> </a>
                      </div>
                      <div class="blog-preview_info">
-                         <h4 class="blog-preview_title"><a href="#">Nên chọn balo màu gì để PHÙ HỢP dễ phối đồ nhất</a></h4>
+                         <h4 class="blog-preview_title"><a href="#">LEGEND CAFÉ SỮA ĐÁ – CAFÉ SỮA ĐÁ NGON NHẤT THẾ GIAN</a></h4>
                          <ul class="post-meta">
-                             <li><i class="fa fa-user"></i>được đăng bởi <a href="#">admin</a></li>
+                             <li><i class="fa fa-user"></i>được đăng bởi <a href="#">thảo thu</a></li>
                              <li><i class="fa fa-comments"></i><a href="#">4 nhận xét</a></li>
                              <li><i class="fa fa-clock-o"></i><span class="day">25</span> <span
                                      class="tháng">Tháng 1</span></li>
                          </ul>
-                         <div class="blog-preview_desc">Trong cuộc sống thường ngày, balo gắn một vai trò vô cùng quan trọng. Những mẫu mã và màu sắc của chiếc balo mà bạn sở hữu cũng phản ánh thẩm mỹ và phong cách thời trang của chính mình. Bên cạnh thương hiệu, mẫu mã, chất liệu...</div>
+                         <div class="blog-preview_desc">LEGEND CAFÉ SỮA ĐÁ là tuyệt phẩm được các chuyên gia cà phê hàng đầu tại Trung Nguyên Legend nghiên cứu trong nhiều năm liền. Đặc biệt, được ứng dụng siêu công nghệ Nano hàng đầu thế giới giúp hạt cà phê được xay nhuyễn đạt đến kích thước nanomet, siêu mịn, có thể hòa tan trong nước để giữ lại 100% hương vị tươi ngon đặc trưng trong mỗi hạt cà phê tuyển chọn, làm nên ly LEGEND CAFÉ SỮA ĐÁ đậm vị rang xay.</div>
                          <a class="blog-preview_btn" href="#">ĐỌC THÊM</a>
                      </div>
                 </div>
