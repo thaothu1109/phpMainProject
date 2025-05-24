@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 14, 2023 at 04:12 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 22, 2025 lúc 10:41 AM
+-- Phiên bản máy phục vụ: 10.4.11-MariaDB
+-- Phiên bản PHP: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fashion_shop`
+-- Cơ sở dữ liệu: `fashion_shop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
+-- Cấu trúc bảng cho bảng `category`
 --
 
 CREATE TABLE `category` (
@@ -40,33 +40,34 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `category`
+-- Đang đổ dữ liệu cho bảng `category`
 --
 
 INSERT INTO `category` (`category_id`, `category_name`, `category_icon`, `category_sub`, `category_slug`, `category_sorting`, `category_status`, `created_at`, `updated_at`) VALUES
-(1, 'Balo du lịch', 'fa fa-gift', NULL, 'balo-du-lịch', 3, 1, '2021-11-04 04:28:06', '2023-09-12 22:46:27'),
-(2, 'shoes', 'fa fa-gift', 1, 'shoes', 3, 1, '2021-11-04 04:28:06', '2021-11-08 07:25:26'),
-(3, 'Balo Laptop', 'fa fa-suitcase', NULL, 'balo-laptop', 1, 1, '2021-11-04 06:08:12', '2023-09-12 22:44:21'),
-(4, 'Balo học sinh', 'fa fa-camera', NULL, 'balo-học-sinh', 2, 1, '2021-11-04 07:13:06', '2023-09-12 22:45:57'),
-(5, 'Balo trẻ em', 'fa fa-bed', NULL, 'balo-trẻ-em', 4, 1, '2021-11-04 07:13:45', '2023-09-12 22:46:47'),
-(6, 'Túi xách', 'fa fa-child', NULL, 'túi-xách', 5, 1, '2021-11-04 07:14:15', '2023-09-12 22:47:19'),
-(7, 'Ví nam, ví nữ', 'fa fa-soccer-ball-o', NULL, 'ví-nam-ví-nũ', 6, 1, '2021-11-04 07:14:37', '2023-09-12 22:47:46'),
-(9, 'Other', 'fa fa-shopping-basket', NULL, 'other', 7, 1, '2021-11-04 07:15:23', '2023-09-13 11:43:13'),
-(10, 'CLOTHING', 'fa fa-gift', 1, 'clothing', 1, 1, '2021-11-05 10:54:32', '2021-11-08 07:25:26'),
-(11, 'JWELLERY', 'fa fa-gift', 1, 'jwellery', 4, 1, '2021-11-05 11:08:16', '2021-11-08 07:25:26'),
-(12, 'SWIMWEAR', 'fa fa-gift', 1, 'swimwear', 2, 1, '2021-11-05 11:08:44', '2021-11-08 07:25:26'),
-(13, 'WATCHES', 'fa fa-suitcase', 3, 'watches', 1, 1, '2021-11-05 11:09:11', '2021-11-17 04:12:13'),
-(14, 'SUNGLASSES', 'fa fa-suitcase', 3, 'sunglasses', 2, 1, '2021-11-05 11:13:27', '2021-11-08 07:27:22'),
-(15, 'SHOES MEN', 'fa fa-suitcase', 13, 'shoes-men', 2, 1, '2021-11-05 11:14:16', '2023-09-13 13:30:39'),
-(16, 'Western Wear', 'fa fa-gift', 12, 'western-wear', 16, 1, '2021-11-08 04:10:15', '2021-11-08 07:28:25'),
+(1, 'Công cụ dụng cụ cà phê', 'fa fa-gift', NULL, 'cong-cu-dung-cu-ca-phe', 3, 1, '2021-11-04 04:28:06', '2025-05-21 15:46:03'),
+(2, 'Syrup', 'fa fa-bed', 5, 'syrup', 3, 2, '2021-11-04 04:28:06', '2025-05-22 03:54:20'),
+(3, 'Cà phê', 'fa fa-suitcase', NULL, 'ca-phe', 1, 1, '2021-11-04 06:08:12', '2025-05-21 15:45:28'),
+(4, 'Máy cà phê', 'fa fa-camera', NULL, 'may-ca-phe', 2, 1, '2021-11-04 07:13:06', '2025-05-21 15:45:49'),
+(5, 'Nguyên liệu pha chế', 'fa fa-bed', NULL, 'nguyen-lieu-pha-che', 4, 1, '2021-11-04 07:13:45', '2025-05-22 02:41:01'),
+(6, 'Ly-Cốc-Tách-Phin', 'fa fa-child', NULL, 'ly-coc-tach-phin', 5, 1, '2021-11-04 07:14:15', '2025-05-21 15:46:30'),
+(7, 'Quàn tặng cao cấp', 'fa fa-soccer-ball-o', NULL, 'quan-tang-cao-cap', 6, 1, '2021-11-04 07:14:37', '2025-05-22 02:41:02'),
+(9, 'Giải pháp cho văn phòng', 'fa fa-shopping-basket', NULL, 'giai-phap-cho-van-phong', 7, 1, '2021-11-04 07:15:23', '2025-05-22 02:41:03'),
+(10, 'Cà phê rang xay', 'fa fa-suitcase', 3, 'ca-phe-rang-xay', 1, 2, '2021-11-05 10:54:32', '2025-05-22 03:54:15'),
+(11, 'Bột và nước Sauce', 'fa fa-bed', 5, 'bot-va-nuoc-sauce', 4, 2, '2021-11-05 11:08:16', '2025-05-22 03:54:21'),
+(12, 'Cà phê hòa tan', 'fa fa-suitcase', 3, 'ca-phe-hoa-tan', 2, 2, '2021-11-05 11:08:44', '2025-05-22 03:54:18'),
+(13, 'Cà phê hạt', 'fa fa-suitcase', 3, 'ca-phe-hat', 1, 2, '2021-11-05 11:09:11', '2025-05-22 03:54:16'),
+(14, 'Máy pha cà phê Presso', 'fa fa-camera', 4, 'may-pha-ca-phe-presso', 2, 2, '2021-11-05 11:13:27', '2025-05-22 03:54:17'),
+(15, 'Máy xay cà phê', 'fa fa-camera', 4, 'may-xay-ca-phe', 2, 2, '2021-11-05 11:14:16', '2025-05-22 03:54:19'),
+(16, 'Nước cốt trái cây', 'fa fa-bed', 5, 'nuoc-cot-trai-cay', 16, 2, '2021-11-08 04:10:15', '2025-05-22 03:54:22'),
 (17, 'Night Wear', 'fa fa-gift', 2, 'night-wear', 17, 2, '2021-11-08 04:18:44', '2023-09-13 13:30:32'),
-(18, 'Ethnic Wear', 'fa fa-gift', 11, 'ethnic-wear', 18, 1, '2021-11-08 04:19:29', '2021-11-08 07:28:31'),
-(19, 'Designer Wear', 'fa fa-gift', 10, 'designer-wear', 2, 1, '2021-11-08 04:19:54', '2021-11-08 07:28:19');
+(18, 'Ethnic Wear', 'fa fa-gift', 11, 'ethnic-wear', 18, 2, '2021-11-08 04:19:29', '2025-05-22 02:38:50'),
+(19, 'Máy pha cà  phê viên nén', 'fa fa-camera', 4, 'may-pha-ca-phe-vien-nen', 2, 2, '2021-11-08 04:19:54', '2025-05-22 03:54:19'),
+(21, 'Về chúng tôi', 'dd', NULL, 've-chung-toi', 8, 2, '2025-05-21 15:48:34', '2025-05-22 05:08:41');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `city`
+-- Cấu trúc bảng cho bảng `city`
 --
 
 CREATE TABLE `city` (
@@ -78,7 +79,7 @@ CREATE TABLE `city` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `city`
+-- Đang đổ dữ liệu cho bảng `city`
 --
 
 INSERT INTO `city` (`matp`, `name_city`, `type`, `created_at`, `updated_at`) VALUES
@@ -149,7 +150,7 @@ INSERT INTO `city` (`matp`, `name_city`, `type`, `created_at`, `updated_at`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `coupon`
+-- Cấu trúc bảng cho bảng `coupon`
 --
 
 CREATE TABLE `coupon` (
@@ -167,7 +168,7 @@ CREATE TABLE `coupon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `coupon`
+-- Đang đổ dữ liệu cho bảng `coupon`
 --
 
 INSERT INTO `coupon` (`coupon_id`, `coupon_code`, `coupon_qty`, `coupon_date_start`, `coupon_date_end`, `coupon_used`, `coupon_condition`, `coupon_sale_number`, `coupon_status`, `created_at`, `updated_at`) VALUES
@@ -177,7 +178,7 @@ INSERT INTO `coupon` (`coupon_id`, `coupon_code`, `coupon_qty`, `coupon_date_sta
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Cấu trúc bảng cho bảng `customer`
 --
 
 CREATE TABLE `customer` (
@@ -193,7 +194,7 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `customer`
+-- Đang đổ dữ liệu cho bảng `customer`
 --
 
 INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_address`, `customer_phone`, `customer_pay`, `customer_code`, `customer_note`, `created_at`, `updated_at`) VALUES
@@ -216,7 +217,7 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_address`, `cus
 -- --------------------------------------------------------
 
 --
--- Table structure for table `district`
+-- Cấu trúc bảng cho bảng `district`
 --
 
 CREATE TABLE `district` (
@@ -229,7 +230,7 @@ CREATE TABLE `district` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `district`
+-- Đang đổ dữ liệu cho bảng `district`
 --
 
 INSERT INTO `district` (`maqh`, `name_district`, `type`, `matp`, `created_at`, `updated_at`) VALUES
@@ -950,7 +951,7 @@ INSERT INTO `district` (`maqh`, `name_district`, `type`, `matp`, `created_at`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Cấu trúc bảng cho bảng `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -965,7 +966,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery`
+-- Cấu trúc bảng cho bảng `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -977,33 +978,63 @@ CREATE TABLE `gallery` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gallery`
+-- Đang đổ dữ liệu cho bảng `gallery`
 --
 
 INSERT INTO `gallery` (`gallery_id`, `pro_id`, `gallery_image`, `created_at`, `updated_at`) VALUES
 (1, 1, 'default.jpg', '2021-11-06 06:49:33', '2021-11-06 06:49:33'),
-(2, 2, '86_1636428063_d8fe93960d1a72c0d25d9709a2da6e4b.jpg', '2021-11-06 07:00:53', '2021-11-09 03:21:03'),
-(4, 2, '19_1636428068_d1641e5f93723973affeec6217b19d45.jpg', '2021-11-06 09:36:24', '2021-11-09 03:21:08'),
-(5, 2, '92_1636428072_358c1db4e2809eaf7ca241929b948dc1.jpg', '2021-11-06 09:36:24', '2021-11-09 03:21:12'),
-(6, 2, '14_1636428075_c695f4e7808eb08340c3cc59dca75179.jpg', '2021-11-06 09:36:26', '2021-11-09 03:21:15'),
-(7, 4, '1636360718_product6.jpg', '2021-11-08 08:38:38', '2021-11-08 08:38:38'),
-(9, 2, '6189eb417a684_1636428609_64b243a20f5c5e086e72117b0bd4cf45.jpg', '2021-11-09 03:30:09', '2021-11-09 03:30:09'),
-(10, 6, '1694588270_Salinan dari Beige and Blue Modern Company Banner (6).jpg', '2023-09-13 12:57:50', '2023-09-13 12:57:50'),
-(11, 5, '650161cadebd7_1694589386_balo2.jpg', '2023-09-13 13:16:26', '2023-09-13 13:16:26'),
-(13, 5, '650161cec11dc_1694589390_balox1.jpg', '2023-09-13 13:16:30', '2023-09-13 13:16:30'),
-(14, 5, '650161cf0a067_1694589391_balox2.jpg', '2023-09-13 13:16:31', '2023-09-13 13:16:31'),
-(15, 5, '650161d1a4ff6_1694589393_balox.jpg', '2023-09-13 13:16:33', '2023-09-13 13:16:33'),
-(17, 3, '650162129b95f_1694589458_balo1.jpg', '2023-09-13 13:17:38', '2023-09-13 13:17:38'),
-(18, 3, '65016213ce00d_1694589459_balo-du-lich-wenzel-daypacker-25l-25511-front.jpg', '2023-09-13 13:17:39', '2023-09-13 13:17:39'),
-(19, 7, '1694590136_balox1.jpg', '2023-09-13 13:28:56', '2023-09-13 13:28:56'),
-(20, 7, '650164cf757fb_1694590159_balox.jpg', '2023-09-13 13:29:19', '2023-09-13 13:29:19'),
-(21, 7, '650164cfb7bbf_1694590159_balo2.jpg', '2023-09-13 13:29:19', '2023-09-13 13:29:19'),
-(22, 7, '650164d13f0e8_1694590161_balox2.jpg', '2023-09-13 13:29:21', '2023-09-13 13:29:21');
+(23, 8, '1747884689_machineE1.jpg', '2025-05-22 03:31:29', '2025-05-22 03:31:29'),
+(24, 9, '1747884752_machineE2.jpg', '2025-05-22 03:32:32', '2025-05-22 03:32:32'),
+(25, 10, '1747884974_machineE3.jpg', '2025-05-22 03:36:14', '2025-05-22 03:36:14'),
+(26, 11, '1747885649_machineE4.jpg', '2025-05-22 03:47:29', '2025-05-22 03:47:29'),
+(27, 12, '1747886041_machineE5.jpg', '2025-05-22 03:54:01', '2025-05-22 03:54:01'),
+(28, 13, '1747886214_machineE6.jpg', '2025-05-22 03:56:54', '2025-05-22 03:56:54'),
+(29, 14, '1747886277_machine2.jpg', '2025-05-22 03:57:57', '2025-05-22 03:57:57'),
+(30, 15, '1747886357_machineE3.jpg', '2025-05-22 03:59:17', '2025-05-22 03:59:17'),
+(31, 16, '1747886407_machineMy.jpg', '2025-05-22 04:00:07', '2025-05-22 04:00:07'),
+(32, 21, '1747887456_congcu1.jpg', '2025-05-22 04:17:36', '2025-05-22 04:17:36'),
+(33, 22, '1747887527_congcu2.jpg', '2025-05-22 04:18:47', '2025-05-22 04:18:47'),
+(34, 23, '1747887656_congcu3.jpg', '2025-05-22 04:20:56', '2025-05-22 04:20:56'),
+(35, 24, '1747887705_congcu4.jpg', '2025-05-22 04:21:45', '2025-05-22 04:21:45'),
+(36, 25, '1747887741_congcu5.jpg', '2025-05-22 04:22:21', '2025-05-22 04:22:21'),
+(37, 26, '1747887775_congcu6.jpg', '2025-05-22 04:22:55', '2025-05-22 04:22:55'),
+(38, 27, '1747887913_congcu7.jpg', '2025-05-22 04:25:13', '2025-05-22 04:25:13'),
+(39, 28, '1747888085_congcu8.jpg', '2025-05-22 04:28:05', '2025-05-22 04:28:05'),
+(40, 29, '1747888161_phache6.jpg', '2025-05-22 04:29:21', '2025-05-22 04:29:21'),
+(41, 30, '1747888384_phache.jpg', '2025-05-22 04:33:04', '2025-05-22 04:33:04'),
+(42, 31, '1747888460_phache2.jpg', '2025-05-22 04:34:20', '2025-05-22 04:34:20'),
+(43, 32, '1747888497_phache5.jpg', '2025-05-22 04:34:57', '2025-05-22 04:34:57'),
+(44, 33, '1747890498_phache8.jpg', '2025-05-22 05:08:18', '2025-05-22 05:08:18'),
+(45, 34, '1747890568_phache7.jpg', '2025-05-22 05:09:28', '2025-05-22 05:09:28'),
+(46, 35, '1747890632_lycoc1.jpg', '2025-05-22 05:10:32', '2025-05-22 05:10:32'),
+(47, 36, '1747890670_lycoc2.jpg', '2025-05-22 05:11:10', '2025-05-22 05:11:10'),
+(48, 37, '1747890797_lycoc3.jpg', '2025-05-22 05:13:17', '2025-05-22 05:13:17'),
+(49, 38, '1747890872_lycoc4.jpg', '2025-05-22 05:14:32', '2025-05-22 05:14:32'),
+(50, 39, '1747890907_lycoc5.jpg', '2025-05-22 05:15:07', '2025-05-22 05:15:07'),
+(51, 40, '1747890952_lycoc6.jpg', '2025-05-22 05:15:52', '2025-05-22 05:15:52'),
+(52, 41, '1747891085_lycoc7.jpg', '2025-05-22 05:18:05', '2025-05-22 05:18:05'),
+(53, 42, '1747891175_ly4.jpg', '2025-05-22 05:19:35', '2025-05-22 05:19:35'),
+(54, 43, '1747891254_ly5.jpg', '2025-05-22 05:20:54', '2025-05-22 05:20:54'),
+(55, 44, '1747891305_ly1.jpg', '2025-05-22 05:21:45', '2025-05-22 05:21:45'),
+(56, 45, '1747891443_ly2.jpg', '2025-05-22 05:24:03', '2025-05-22 05:24:03'),
+(57, 46, '1747891487_ly3.jpg', '2025-05-22 05:24:47', '2025-05-22 05:24:47'),
+(58, 47, '1747891576_gift.jpg', '2025-05-22 05:26:16', '2025-05-22 05:26:16'),
+(59, 48, '1747891608_gift2.jpg', '2025-05-22 05:26:48', '2025-05-22 05:26:48'),
+(60, 49, '1747891635_gift_G7.jpg', '2025-05-22 05:27:15', '2025-05-22 05:27:15'),
+(61, 50, '1747891807_gift5.jpg', '2025-05-22 05:30:07', '2025-05-22 05:30:07'),
+(62, 51, '1747891869_gift4.jpg', '2025-05-22 05:31:09', '2025-05-22 05:31:09'),
+(63, 53, '1747892237_success3.jpg', '2025-05-22 05:37:17', '2025-05-22 05:37:17'),
+(64, 54, '1747892374_G7gold.jpg', '2025-05-22 05:39:34', '2025-05-22 05:39:34'),
+(65, 55, '1747892418_legend2.jpg', '2025-05-22 05:40:18', '2025-05-22 05:40:18'),
+(66, 56, '1747892796_rang3.jpg', '2025-05-22 05:46:36', '2025-05-22 05:46:36'),
+(67, 57, '1747892870_rang1.jpg', '2025-05-22 05:47:50', '2025-05-22 05:47:50'),
+(68, 58, '1747892909_rang1.jpg', '2025-05-22 05:48:29', '2025-05-22 05:48:29'),
+(69, 59, '1747892945_machineVending.jpg', '2025-05-22 05:49:05', '2025-05-22 05:49:05');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Cấu trúc bảng cho bảng `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -1013,7 +1044,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Đang đổ dữ liệu cho bảng `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -1035,7 +1066,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order`
+-- Cấu trúc bảng cho bảng `order`
 --
 
 CREATE TABLE `order` (
@@ -1049,7 +1080,7 @@ CREATE TABLE `order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `order`
+-- Đang đổ dữ liệu cho bảng `order`
 --
 
 INSERT INTO `order` (`order_id`, `user_id`, `order_code`, `order_status`, `order_review`, `created_at`, `updated_at`) VALUES
@@ -1072,7 +1103,7 @@ INSERT INTO `order` (`order_id`, `user_id`, `order_code`, `order_status`, `order
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orderdetail`
+-- Cấu trúc bảng cho bảng `orderdetail`
 --
 
 CREATE TABLE `orderdetail` (
@@ -1088,7 +1119,7 @@ CREATE TABLE `orderdetail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `orderdetail`
+-- Đang đổ dữ liệu cho bảng `orderdetail`
 --
 
 INSERT INTO `orderdetail` (`orderdetail_id`, `order_code`, `pro_id`, `order_de_price`, `order_de_qty`, `order_de_coupon`, `order_review`, `created_at`, `updated_at`) VALUES
@@ -1120,7 +1151,7 @@ INSERT INTO `orderdetail` (`orderdetail_id`, `order_code`, `pro_id`, `order_de_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Cấu trúc bảng cho bảng `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -1132,7 +1163,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Cấu trúc bảng cho bảng `product`
 --
 
 CREATE TABLE `product` (
@@ -1153,22 +1184,69 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `product`
+-- Đang đổ dữ liệu cho bảng `product`
 --
 
 INSERT INTO `product` (`product_id`, `product_name`, `product_slug`, `category_id`, `product_desc`, `product_price`, `product_price_sale`, `product_quantity`, `product_view`, `product_image`, `product_sold`, `product_status`, `created_at`, `updated_at`) VALUES
-(1, 'product new', 'product-new', 1, 'product 1', 210000, 0, 116, 135, '1694537740_TREK45-1.jpg', 9, 1, '2021-11-06 06:49:33', '2023-09-13 13:24:11'),
-(2, 'product 2', 'product-2', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin rhoncus, ultricies posuere erat. Duis convallis, arcu nec aliquam consequat, purus felis vehicula felis, a dapibus enim lorem nec augue. Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integerenim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.', 300000, 250000, 114, 109, '1694537691_balo-du-lich-wenzel-daypacker-25l-25511-front.jpg', 9, 1, '2021-11-15 05:24:28', '2023-09-13 13:32:30'),
-(3, 'Balo hoc sinh Herschel Retreat', 'balo-hoc-sinh-herschel-retreat', 4, 'product 3', 350000, 0, 119, 28, '1694537619_F5X-Navy-3-1-600x600.jpg', 5, 1, '2021-11-08 08:29:42', '2023-09-13 13:32:22'),
-(4, 'Balo du lịch Reeyee RY111', 'balo-du-lịch-reeyee-ry111', 1, '<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"color:#333333\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\"><strong>Reeyee RY1052 15.6&quot; M Black</strong>&nbsp;l&agrave; d&ograve;ng balo cao cấp, mang phong c&aacute;ch độc đ&aacute;o, hiện đại của thương hiệu<strong>&nbsp;ReeYee&nbsp;</strong>Việt Nam hiện đang c&oacute; mặt tại&nbsp;MIA.vn.&nbsp;<strong>Reeyee&nbsp;</strong>l&agrave; thương hiệu balo, t&uacute;i x&aacute;ch, đứng top với thiết kế trẻ trung sang trọng, c&aacute;c d&ograve;ng sản phẩm&nbsp;<strong>ReeYee</strong>&nbsp;lu&ocirc;n mang hơi hướng hiện đại, chất liệu cực tốt ph&ugrave; hợp cho mọi đối tượng.</span></span></span></span></p>\r\n\r\n<h1 style=\"text-align:justify\"><span style=\"font-size:2.5rem\"><strong><span style=\"color:#000000\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\"><strong><span style=\"color:#ff9c00\">ĐẶC T&Iacute;NH NỔI BẬT CỦA RY1052</span></strong></span></span></span></strong></span></h1>\r\n\r\n<h2 style=\"text-align:justify\"><span style=\"font-size:2rem\"><strong><span style=\"color:#000000\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"font-size:24px\"><strong>Chất liệu chống thấm tốt</strong></span></span></span></span></strong></span></h2>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"color:#333333\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\">Sản phẩm chất lượng tốt bắt đầu từ chất liệu tạo ra sản phẩm, v&agrave; balo&nbsp;<strong>Reeyee RY1043&nbsp;</strong>cũng vậy.&nbsp;Với chất liệu vải Polyester trơn mịn, chống x&ugrave;, chống biến dạng v&agrave; bạc m&agrave;u theo thời gian, c&oacute; khả năng trượt nước rất tốt v&agrave; hiệu quả, gi&uacute;p bạn ho&agrave;n to&agrave;n y&ecirc;n t&acirc;m mang theo nhiều đồ d&ugrave;ng cần thiết ra ngo&agrave;i trong những ng&agrave;y thời tiết thất thường.&nbsp;</span></span></span></span></p>\r\n\r\n<h2 style=\"text-align:justify\"><span style=\"font-size:2rem\"><strong><span style=\"color:#000000\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:24px\">Thiết kế phong c&aacute;ch hiện đại</span></strong></span></span></span></strong></span></h2>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"color:#333333\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\">Balo laptop đa năng cao cấp c&oacute; thiết kế mạnh mẽ ph&ugrave; hợp cả khi đi l&agrave;m nhờ thiết kế ngăn laptop l&ecirc;n đến 15.6&quot; hoặc đồng h&agrave;nh trong chuyến d&atilde; ngoại c&ugrave;ng bạn.&nbsp;</span></span></span></span></p>\r\n\r\n<h2 style=\"text-align:justify\"><span style=\"font-size:2rem\"><strong><span style=\"color:#000000\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"font-size:24px\"><strong>Ngăn chứa rộng r&atilde;i</strong></span></span></span></span></strong></span></h2>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"color:#333333\"><span style=\"font-family:Quicksand,sans-serif\"><span style=\"background-color:#ffffff\">Balo laptop được chia l&agrave;m nhiều ngăn tiện &iacute;ch gi&uacute;p bạn cất đồ một c&aacute;ch khoa học&nbsp; gồm 1 ngăn ch&iacute;nh rộng lớn t&iacute;ch hợp ngăn chống sốc vừa laptop 15.6&quot; v&agrave; c&aacute;c ngăn phụ tiện lợi. Ngăn phụ nhỏ ở mắt trước balo với kh&oacute;a zip ngang nhỏ gọn, bạn c&oacute; thể d&ugrave;ng để đựng d&acirc;y sạc điện thoại, tai nghe..c&aacute;c vật dụng c&aacute; nh&acirc;n nhỏ kh&aacute;c. Ngăn phụ với kh&oacute;a zip dọc ở mặt trước balo gi&uacute;p bạn đựng được đồ đạc nhỏ gọn, dễ d&agrave;ng cho thao t&aacute;c lấy ta, cất v&agrave;o như ch&igrave;a kh&oacute;a, khăn giấy&hellip;</span></span></span></span></p>', 800000, 0, 124, 5, '1694537514_Naturehike-Unisex-SkinBag-Ultralight-Folding-Backpack-Waterproof-Shoulders-Bag-Outdoor-Travelling-Bag-with-Bu.jpg', 1, 1, '2021-11-08 08:38:38', '2023-09-13 13:32:30'),
-(5, 'Balo Herschel Dawson', 'balo-herschel-dawson', 3, '<p>MIA.vn - Nh&agrave; ph&acirc;n phối độc quyền thương hiệu Herschel tại Việt Nam</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Từ 12/2021 MIA.vn ch&iacute;nh thức được Herschel Supply Co. lựa chọn trở th&agrave;nh nh&agrave; ph&acirc;n phối độc quyền to&agrave;n bộ sản phẩm Herschel tại Việt Nam.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Thương hiệu Herschel Supply</strong></p>\r\n\r\n<p>Thương hiệu nổi tiếng đến từ Canada. Ra đời năm 2009, bởi hai anh em Jamie v&agrave; Lydon Cormack. C&aacute;c bộ sưu tập của Herschel l&agrave;&nbsp;sự kết hợp ho&agrave;n hảo giữa chất ho&agrave;i cổ đan xen n&eacute;t s&agrave;nh điệu của thời trang cao cấp. Herschel&nbsp;đ&atilde; tự biến m&igrave;nh trở th&agrave;nh một xu hướng của thế giới.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>M&ocirc; tả sản phẩm</strong></p>\r\n\r\n<p>DAWSON II - Một d&ograve;ng Balo c&oacute; thiết kế nhỏ gọn, đơn giản với trọng lượng cực nhẹ v&agrave; thời trang từ Herschel.&nbsp;</p>\r\n\r\n<ul>\r\n	<li>\r\n	<p>Tương th&iacute;ch với d&ograve;ng MacBook/Laptop k&iacute;ch thước 13 inch</p>\r\n	</li>\r\n</ul>\r\n\r\n<ul>\r\n	<li>\r\n	<p>C&oacute; đệm v&agrave; l&oacute;t l&ocirc;ng cừu ngăn laptop</p>\r\n	</li>\r\n</ul>\r\n\r\n<ul>\r\n	<li>\r\n	<p>Đệm lưng lưới kh&iacute;</p>\r\n	</li>\r\n</ul>\r\n\r\n<ul>\r\n	<li>\r\n	<p>D&acirc;y g&agrave;i từ t&iacute;nh đ&oacute;ng bằng kẹp ghim kim loại</p>\r\n	</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>MIA.vn cam kết</strong></p>\r\n\r\n<ul>\r\n	<li>\r\n	<p>Cam kết h&agrave;ng Ch&iacute;nh H&atilde;ng 100% - Ph&aacute;t Hiện H&agrave;ng Giả Đền 200%</p>\r\n	</li>\r\n</ul>\r\n\r\n<ul>\r\n	<li>\r\n	<p>Bảo h&agrave;nh trọn đời tại MIA.vn</p>\r\n	</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>\r\n	<p>Miễn ph&iacute; đổi trả trong 365 ng&agrave;y</p>\r\n	</li>\r\n	<li>\r\n	<p>Miễn ph&iacute; giao h&agrave;ng to&agrave;n quốc</p>\r\n	</li>\r\n</ul>', 500000, 400000, 241, 22, '1694589197_balo3.jpg', 15, 1, '2021-11-08 08:59:07', '2023-09-13 14:44:53'),
-(6, 'san pham moixxxx', 'san-pham-moixxxx', 4, 'xxxxxxxxxxxxxxxxxxxxxxxxxx', 999999, 888888, 99, 0, '1694588306_balo-herschel-dawson-13-backpack-s-black-12945-11638326480_931e00a2fa7b442d8b4289f63a007bd4_master.jpg', 0, 2, '2023-09-13 12:57:50', '2023-09-13 12:59:50'),
-(7, 'demo san pham moi nhatxxxx', 'demo-san-pham-moi-nhatxxxx', 1, 'mo ta xxxxxxxx', 999999, 888888, 99, 0, '1694590136_balox1.jpg', 0, 1, '2023-09-13 13:28:56', '2023-09-13 13:29:37');
+(1, 'Cà phê Hòa tan G7 3in1 - Bịch 1 kg', 'ca-phe-hoa-tan-g7-3in1-bich-1-kg', 3, 'C&agrave; ph&ecirc; h&ograve;a tan <strong>G7 3in1</strong> l&agrave; sản phẩm biểu tượng của <strong>Trung Nguy&ecirc;n Legend</strong>, nổi tiếng với hương vị đậm đ&agrave;, thơm nồng đặc trưng, chinh phục h&agrave;ng triệu người d&ugrave;ng tại Việt Nam v&agrave; hơn 60 quốc gia tr&ecirc;n thế giới.', 99000, 77000, 20, 136, '1747884345_tanG73in1_2.jpg', 9, 1, '2021-11-06 06:49:33', '2025-05-22 03:49:42'),
+(2, 'Cà phê G7 3in1 - Bịch 50 sticks 16gr', 'ca-phe-g7-3in1-bich-50-sticks-16gr', 3, 'C&agrave; ph&ecirc; h&ograve;a tan <strong>G7 3in1</strong> l&agrave; sản phẩm nổi tiếng của <strong>Tập đo&agrave;n Trung Nguy&ecirc;n Legend</strong>, được người ti&ecirc;u d&ugrave;ng trong v&agrave; ngo&agrave;i nước ưa chuộng nhờ hương vị đậm đ&agrave;, thơm ngon v&agrave; tiện lợi. Sản phẩm l&agrave; sự kết hợp ho&agrave;n hảo giữa c&agrave; ph&ecirc; nguy&ecirc;n chất, đường v&agrave; sữa &ndash; mang đến ly c&agrave; ph&ecirc; mạnh mẽ nhưng vẫn c&acirc;n bằng, dễ uống.', 180000, 160000, 114, 111, '1747884264_tanG73in1_2.jpg', 9, 1, '2021-11-15 05:24:28', '2025-05-22 03:55:40'),
+(3, 'Trung Nguyên Legend Cappuccino Coconut', 'trung-nguyen-legend-cappuccino-coconut', 3, 'Trung Nguy&ecirc;n Legend Cappuccino Coconut l&agrave; d&ograve;ng c&agrave; ph&ecirc; h&ograve;a tan cao cấp thuộc bộ sưu tập &quot;Legend Cappuccino&quot; của Trung Nguy&ecirc;n &ndash; thương hiệu c&agrave; ph&ecirc; h&agrave;ng đầu Việt Nam. Với c&ocirc;ng thức độc đ&aacute;o kết hợp vị c&agrave; ph&ecirc; đậm đ&agrave;, lớp bọt s&aacute;nh mịn c&ugrave;ng hương dừa tự nhi&ecirc;n thơm ngậy, sản phẩm mang lại trải nghiệm c&agrave; ph&ecirc; ho&agrave;n to&agrave;n mới mẻ v&agrave; tinh tế.', 90000, 75000, 23, 28, '1747884096_tanLegendcoconut.jpg', 5, 1, '2021-11-08 08:29:42', '2025-05-21 03:49:22'),
+(4, 'Trung Nguyên Legend Classic - Bịch 50 sachets', 'trung-nguyen-legend-classic-bich-50-sachets', 3, '<p style=\"text-align:justify\">Thưởng thức t&aacute;ch c&agrave; ph&ecirc; năng lượng Trung Nguy&ecirc;n Legend Classic tuyệt hảo c&ugrave;ng Những Cuốn S&aacute;ch Đổi Đời sẽ gi&uacute;p bạn c&oacute; được những ph&uacute;t gi&acirc;y s&aacute;ng tạo, tỉnh thức tr&ecirc;n h&agrave;nh tr&igrave;nh kiến tạo sự Gi&agrave;u c&oacute;, Th&agrave;nh c&ocirc;ng v&agrave; Hạnh ph&uacute;c đ&iacute;ch thực.</p>', 202000, 166000, 124, 5, '1747883899_tanClassic2.jpg', 1, 1, '2021-11-08 08:38:38', '2025-05-21 03:49:07'),
+(5, 'Cà phê G7 Gold Picasso Latte', 'ca-phe-g7-gold-picasso-latte', 3, '<p>Mang phong vị của Ly c&agrave; ph&ecirc; Picasso Latte tại kh&ocirc;ng gian The Cafe Land với vị b&eacute;o, ch&uacute;t đắng nhẹ h&ograve;a lẫn hương vanilla ngọt dịu v&agrave; lớp foam d&agrave;y, mịn</p>', 90000, 81000, 20, 23, '1747883627_G7gold.jpg', 15, 1, '2021-11-08 08:59:07', '2025-05-22 03:48:49'),
+(6, 'Trung Nguyên Legend Americano hộp 15 gói x 2g', 'Trung Nguyên Legend Americano hộp 15 gói x 2g', 3, 'Thưởng thức t&aacute;ch c&agrave; ph&ecirc; năng lượng Trung Nguy&ecirc;n Legend Classic tuyệt hảo c&ugrave;ng Những Cuốn S&aacute;ch Đổi Đời sẽ gi&uacute;p bạn c&oacute; được những ph&uacute;t gi&acirc;y s&aacute;ng tạo, tỉnh thức tr&ecirc;n h&agrave;nh tr&igrave;nh kiến tạo sự Gi&agrave;u c&oacute;, Th&agrave;nh c&ocirc;ng v&agrave; Hạnh ph&uacute;c đ&iacute;ch thực.', 202000, 166000, 10, 0, '1747883386_legend2.jpg', 0, 1, '2023-09-13 12:57:50', '2024-09-13 03:48:41'),
+(7, 'Cà phê Espresso', 'ca-phe-espresso', 3, 'Sản phẩm Espresso Bu&ocirc;n Ma Thuột l&agrave; một tỷ lệ pha trộn ho&agrave;n hảo, l&agrave; một chế t&aacute;c c&agrave; ph&ecirc; c&acirc;n bằng hương v&agrave; vị, đượm ch&uacute;t sự đa dạng của hương hoa đồng nội lẫn tr&aacute;i c&acirc;y', 287280, 244148, 20, 1, '1747883229_espresso.jpg', 0, 1, '2023-09-13 13:28:56', '2025-05-22 03:48:31'),
+(8, 'Máy pha café Gaggia Magenta Plus', 'may-pha-cafe-gaggia-magenta-plus', 4, '<strong>Gaggia Magenta Plus</strong> l&agrave; d&ograve;ng m&aacute;y pha c&agrave; ph&ecirc; tự động cao cấp đến từ thương hiệu huyền thoại <strong>Gaggia Milano (Italia)</strong> &ndash; nơi khai sinh ra m&aacute;y espresso đầu ti&ecirc;n tr&ecirc;n thế giới. Thiết kế hiện đại, bảng điều khiển cảm ứng th&ocirc;ng minh c&ugrave;ng khả năng t&ugrave;y chỉnh chuy&ecirc;n s&acirc;u gi&uacute;p Magenta Plus trở th&agrave;nh lựa chọn l&yacute; tưởng cho người y&ecirc;u c&agrave; ph&ecirc; muốn kiểm so&aacute;t chất lượng từng t&aacute;ch espresso.', 20500000, 20000000, 10, 1, '1747884689_machineE1.jpg', 0, 1, '2025-05-22 03:31:29', '2025-05-22 04:16:09'),
+(9, 'Máy pha cà phê Lamvita Combi 2', 'may-pha-ca-phe-lamvita-combi-2', 14, 'M&aacute;y pha c&agrave; ph&ecirc; Lamvita Combi II t&iacute;ch hợp cả chức năng xay v&agrave; pha c&agrave; ph&ecirc; trong c&ugrave;ng một thiết bị, gi&uacute;p tiết kiệm kh&ocirc;ng gian v&agrave; chi ph&iacute; đầu tư. M&aacute;y c&oacute; c&ocirc;ng suất mạnh mẽ, th&acirc;n m&aacute;y l&agrave;m từ inox cao cấp, v&agrave; thiết kế hiện đại, ph&ugrave; hợp với nhiều kh&ocirc;ng gian sử dụng', 22680000, 22000000, 10, 0, '1747884752_machineE2.jpg', 0, 1, '2025-05-22 03:32:32', '2025-05-22 03:32:32'),
+(10, 'Máy pha cà phê Lamvita LSD 1G Trắng Bạc', 'may-pha-ca-phe-lamvita-lsd-1g-trang-bac', 4, '<p>M&aacute;y pha c&agrave; ph&ecirc; Lamvita LSD 1 GR l&agrave; d&ograve;ng m&aacute;y pha c&agrave; ph&ecirc; b&aacute;n tự động chuy&ecirc;n nghiệp, được thiết kế v&agrave; sản xuất tại Việt Nam. Với c&ocirc;ng suất mạnh mẽ v&agrave; thiết kế hiện đại, m&aacute;y ph&ugrave; hợp cho c&aacute;c qu&aacute;n c&agrave; ph&ecirc; vừa v&agrave; nhỏ, văn ph&ograve;ng hoặc gia đ&igrave;nh y&ecirc;u th&iacute;ch c&agrave; ph&ecirc; chất lượng cao.</p>', 38800000, 37000000, 10, 0, '1747884974_machineE3.jpg', 0, 1, '2025-05-22 03:36:14', '2025-05-22 04:14:23'),
+(11, 'Máy pha cà phê Lamvita SteamX Đen', 'may-pha-ca-phe-lamvita-steamx-den', 4, '<p>M&aacute;y pha c&agrave; ph&ecirc; Lamvita X l&agrave; d&ograve;ng m&aacute;y pha c&agrave; ph&ecirc; b&aacute;n tự động chuy&ecirc;n nghiệp, được thiết kế v&agrave; sản xuất tại Việt Nam. Với c&ocirc;ng suất mạnh mẽ v&agrave; thiết kế hiện đại, m&aacute;y ph&ugrave; hợp cho c&aacute;c qu&aacute;n c&agrave; ph&ecirc; vừa v&agrave; nhỏ, văn ph&ograve;ng hoặc gia đ&igrave;nh y&ecirc;u th&iacute;ch c&agrave; ph&ecirc; chất lượng cao.</p>', 35000000, 33000000, 5, 0, '1747885649_machineE4.jpg', 0, 1, '2025-05-22 03:47:29', '2025-05-22 03:48:11'),
+(12, 'Máy pha cafe tự động Melitta Avanza Titan', 'may-pha-cafe-tu-dong-melitta-avanza-titan', 4, 'M&aacute;y pha c&agrave; ph&ecirc; tự động Melitta Avanza Titan l&agrave; một lựa chọn tuyệt vời cho những ai y&ecirc;u th&iacute;ch c&agrave; ph&ecirc; chất lượng cao nhưng c&oacute; kh&ocirc;ng gian bếp hạn chế. Với thiết kế nhỏ gọn v&agrave; nhiều t&iacute;nh năng tiện &iacute;ch, m&aacute;y đ&aacute;p ứng tốt nhu cầu pha chế c&agrave; ph&ecirc; tại nh&agrave; hoặc văn ph&ograve;ng nhỏ.', 21680000, 20000000, 5, 0, '1747886041_machineE5.jpg', 0, 1, '2025-05-22 03:54:01', '2025-05-22 03:54:01'),
+(13, 'Máy pha cafe tự động Melitta TouchPlus CI', 'may-pha-cafe-tu-dong-melitta-touchplus-ci', 4, 'M&aacute;y pha c&agrave; ph&ecirc; tự động Melitta CI Touch Plus l&agrave; d&ograve;ng m&aacute;y pha c&agrave; ph&ecirc; tự động cao cấp đến từ Đức, được thiết kế để mang đến trải nghiệm c&agrave; ph&ecirc; chuy&ecirc;n nghiệp ngay tại nh&agrave; hoặc văn ph&ograve;ng. Với khả năng t&ugrave;y chỉnh đa dạng v&agrave; vận h&agrave;nh &ecirc;m &aacute;i, m&aacute;y ph&ugrave; hợp cho những người y&ecirc;u th&iacute;ch c&agrave; ph&ecirc; chất lượng cao v&agrave; mong muốn sự tiện lợi trong qu&aacute; tr&igrave;nh pha chế.', 34120000, 33000000, 3, 0, '1747886214_machineE6.jpg', 0, 1, '2025-05-22 03:56:54', '2025-05-22 03:56:54'),
+(14, 'Máy pha cà phê tự động P-EMIC PT102', 'may-pha-ca-phe-tu-dong-p-emic-pt102', 4, '<p>M&aacute;y pha c&agrave; ph&ecirc; tự động P-Emic PTB-102 l&agrave; một lựa chọn đ&aacute;ng c&acirc;n nhắc cho gia đ&igrave;nh, văn ph&ograve;ng hoặc qu&aacute;n c&agrave; ph&ecirc; nhỏ, nhờ v&agrave;o khả năng pha chế đa dạng v&agrave; thiết kế hiện đại. Dưới đ&acirc;y l&agrave; th&ocirc;ng tin chi tiết về sản phẩm</p>', 31000000, 29000000, 3, 0, '1747886277_machine2.jpg', 0, 1, '2025-05-22 03:57:57', '2025-05-22 03:57:57'),
+(15, 'Máy pha cafe Lamvita LSD 1G Trắng Bạc', 'may-pha-cafe-lamvita-lsd-1g-trang-bac', 4, '<p>M&aacute;y pha c&agrave; ph&ecirc; Lamvita LSD 1G Trắng Bạc l&agrave; d&ograve;ng m&aacute;y pha c&agrave; ph&ecirc; chuy&ecirc;n nghiệp, ph&ugrave; hợp cho c&aacute;c qu&aacute;n c&agrave; ph&ecirc; vừa v&agrave; nhỏ, văn ph&ograve;ng hoặc những ai y&ecirc;u th&iacute;ch trải nghiệm espresso chất lượng cao tại nh&agrave;. Sản phẩm nổi bật với thiết kế hiện đại, hiệu suất ổn định v&agrave; nhiều t&iacute;nh năng hỗ trợ barista trong qu&aacute; tr&igrave;nh pha chế.</p>', 38880000, 37560000, 5, 0, '1747886357_machineE3.jpg', 0, 1, '2025-05-22 03:59:17', '2025-05-22 03:59:17'),
+(16, 'Máy pha cafe Lelit Anita PL042EMI', 'may-pha-cafe-lelit-anita-pl042emi', 4, '<p>Lelit Anita PL042EMI l&agrave; một m&aacute;y pha c&agrave; ph&ecirc; espresso b&aacute;n tự động t&iacute;ch hợp m&aacute;y xay, đến từ thương hiệu Lelit của &Yacute;. Sản phẩm n&agrave;y được thiết kế nhỏ gọn, ph&ugrave; hợp cho gia đ&igrave;nh, văn ph&ograve;ng hoặc c&aacute;c qu&aacute;n c&agrave; ph&ecirc; nhỏ, mang lại trải nghiệm pha c&agrave; ph&ecirc; chuy&ecirc;n nghiệp ngay tại nh&agrave;</p>', 18500000, 17600000, 3, 0, '1747886407_machineMy.jpg', 0, 1, '2025-05-22 04:00:07', '2025-05-22 04:00:07'),
+(21, 'Giấy lọc cà phê hình tròn S660 60mm', 'giay-loc-ca-phe-hinh-tron-s660-60mm', 1, 'Giấy lọc tẩy trắng h&igrave;nh tr&ograve;n chuy&ecirc;n dụng cho cold drip v&agrave; moka Đường k&iacute;nh: 60mm', 60000, 30000, 100, 0, '1747887456_congcu1.jpg', 0, 1, '2025-05-22 04:17:36', '2025-05-22 04:17:36'),
+(22, 'Giấy lọc V60 01 không tẩy trắng CK9308', 'giay-loc-v60-01-khong-tay-trang-ck9308', 1, 'Giấy lọc V60 01 kh&ocirc;ng tẩy trắng CK9308', 110000, 90000, 200, 0, '1747887527_congcu2.jpg', 0, 1, '2025-05-22 04:18:47', '2025-05-22 04:18:47'),
+(23, 'Bột vệ sinh máy pha cà phê Cafiza 2 900ml', 'bot-ve-sinh-may-pha-ca-phe-cafiza-2-900ml', 1, 'Bột vệ sinh m&aacute;y pha c&agrave; ph&ecirc; Cafiza 2 900ml', 250000, 230000, 50, 0, '1747887656_congcu3.jpg', 0, 1, '2025-05-22 04:20:56', '2025-05-22 04:20:56'),
+(24, 'Cối xay cà phê lõi thép Cafede Kona - nhạt', 'coi-xay-ca-phe-loi-thep-cafede-kona-nhat', 1, 'Cối xay c&agrave; ph&ecirc; l&otilde;i th&eacute;p Cafede Kona - nhạt', 700000, 690000, 3, 0, '1747887705_congcu4.jpg', 0, 1, '2025-05-22 04:21:45', '2025-05-22 04:21:45'),
+(25, 'Cối xay cà phê lõi thép Cafede Kona - đậm', 'coi-xay-ca-phe-loi-thep-cafede-kona-dam', 1, 'Cối xay c&agrave; ph&ecirc; l&otilde;i th&eacute;p Cafede Kona - đậm', 799000, 699000, 5, 0, '1747887741_congcu5.jpg', 0, 1, '2025-05-22 04:22:21', '2025-05-22 04:22:21'),
+(26, 'Cối xay cà phê thân gỗ lưỡi thép - nhạt', 'coi-xay-ca-phe-than-go-luoi-thep-nhat', 1, 'Cối xay c&agrave; ph&ecirc; th&acirc;n gỗ lưỡi th&eacute;p - nhạt', 699000, 599000, 6, 0, '1747887775_congcu6.jpg', 0, 1, '2025-05-22 04:22:55', '2025-05-22 04:22:55'),
+(27, 'Bình thuỷ tinh Café nắp gỗ 360ml CK5400', 'binh-thuy-tinh-cafe-nap-go-360ml-ck5400', 1, 'B&igrave;nh thuỷ tinh Caf&eacute; nắp gỗ 360ml CK5400', 999999, 699000, 6, 0, '1747887913_congcu7.jpg', 0, 1, '2025-05-22 04:25:13', '2025-05-22 04:25:13'),
+(28, 'Ấm rót nước nóng inox đen Cafede CK9115', 'am-rot-nuoc-nong-inox-den-cafede-ck9115', 1, 'Ấm r&oacute;t nước n&oacute;ng inox đen Cafede CK9115', 599000, 499000, 35, 0, '1747888085_congcu8.jpg', 0, 1, '2025-05-22 04:28:05', '2025-05-22 04:28:05'),
+(29, 'Syrup Freshy Chanh Vàng 710ml/Chai', 'syrup-freshy-chanh-vang-710mlchai', 5, 'Syrup Freshy Chanh V&agrave;ng 710ml/Chai', 150000, 75000, 25, 0, '1747888161_phache6.jpg', 0, 1, '2025-05-22 04:29:21', '2025-05-22 04:29:21'),
+(30, 'Davinci - Bột nền pha chế Frappease 1.5kg', 'davinci-bot-nen-pha-che-frappease-15kg', 1, 'Davinci - Bột nền pha chế Frappease 1.5kg', 199000, 189000, 20, 0, '1747888384_phache.jpg', 0, 1, '2025-05-22 04:33:04', '2025-05-22 04:33:04'),
+(31, 'Pomona - Bột Cocolate bạc hà 800g', 'pomona-bot-cocolate-bac-ha-800g', 5, 'Pomona - Bột Cocolate bạc h&agrave; 800g', 399000, 299000, 20, 0, '1747888460_phache2.jpg', 0, 1, '2025-05-22 04:34:20', '2025-05-22 04:34:20'),
+(32, 'Syrup Freshy Chanh', 'syrup-freshy-chanh', 5, 'Syrup Freshy Chanh', 150000, 75000, 25, 0, '1747888497_phache5.jpg', 0, 1, '2025-05-22 04:34:57', '2025-05-22 04:34:57'),
+(33, 'Pomona - Syrup Táo đỏ 1L', 'pomona-syrup-tao-do-1l', 5, 'Pomona - Syrup T&aacute;o đỏ 1L', 150000, 99000, 25, 0, '1747890498_phache8.jpg', 0, 1, '2025-05-22 05:08:18', '2025-05-22 05:08:18'),
+(34, 'Syrup Freshy Xoài', 'syrup-freshy-xoai', 5, 'Syrup Freshy Xo&agrave;i', 1500000, 99000, 200, 0, '1747890568_phache7.jpg', 0, 1, '2025-05-22 05:09:28', '2025-05-22 05:09:28'),
+(35, 'Bộ ly sứ G7 Gold', 'bo-ly-su-g7-gold', 6, 'Bộ ly sứ G7 Gold', 206000, 0, 20, 0, '1747890632_lycoc1.jpg', 0, 1, '2025-05-22 05:10:32', '2025-05-22 05:10:32'),
+(36, 'Ly sứ Trung Nguyên Legend', 'ly-su-trung-nguyen-legend', 6, 'Ly sứ Trung Nguy&ecirc;n Legend', 109000, 0, 20, 0, '1747890670_lycoc2.jpg', 0, 1, '2025-05-22 05:11:10', '2025-05-22 05:11:31'),
+(37, 'Bộ ly CFSD (ly cao, muỗng)', 'bo-ly-cfsd-ly-cao-muong', 6, 'Bộ ly CFSD (ly cao, muỗng)', 109000, 0, 20, 0, '1747890797_lycoc3.jpg', 0, 1, '2025-05-22 05:13:17', '2025-05-22 05:13:17'),
+(38, 'Phin nhôm hoa văn Trung Nguyên vàng', 'phin-nhom-hoa-van-trung-nguyen-vang', 6, 'Phin nh&ocirc;m hoa văn Trung Nguy&ecirc;n v&agrave;ng', 209000, 0, 20, 0, '1747890872_lycoc4.jpg', 0, 1, '2025-05-22 05:14:32', '2025-05-22 05:14:32'),
+(39, 'Phin nhôm cao cấp hoa văn màu đen có hộp giấy', 'phin-nhom-cao-cap-hoa-van-mau-den-co-hop-giay', 6, 'Phin nh&ocirc;m cao cấp hoa văn m&agrave;u đen c&oacute; hộp giấy', 99000, 0, 20, 0, '1747890907_lycoc5.jpg', 0, 1, '2025-05-22 05:15:07', '2025-05-22 05:15:07'),
+(40, 'Phin nhôm hoa văn Trung Nguyên nâu', 'phin-nhom-hoa-van-trung-nguyen-nau', 6, 'Phin nh&ocirc;m hoa văn Trung Nguy&ecirc;n n&acirc;u', 202000, 0, 20, 0, '1747890952_lycoc6.jpg', 0, 1, '2025-05-22 05:15:52', '2025-05-22 05:15:52'),
+(41, 'Ly Latte MNV màu xanh', 'ly-latte-mnv-mau-xanh', 6, 'Ly Latte MNV m&agrave;u xanh', 42000, 0, 20, 0, '1747891085_lycoc7.jpg', 0, 1, '2025-05-22 05:18:05', '2025-05-22 05:18:05'),
+(42, 'Luminarc màu hồng J5388', 'luminarc-mau-hong-j5388', 6, '<a href=\"error.html\">Luminarc m&agrave;u hồng J5388</a>', 20000, 0, 20, 0, '1747891175_ly4.jpg', 0, 1, '2025-05-22 05:19:35', '2025-05-22 05:19:35'),
+(43, 'Bộ Tách + Dĩa Espresso', 'bo-tach-dia-espresso', 6, '<a href=\"error.html\">Bộ T&aacute;ch + Dĩa Espresso</a>', 79000, 0, 25, 0, '1747891254_ly5.jpg', 0, 1, '2025-05-22 05:20:54', '2025-05-22 05:20:54'),
+(44, 'Ly Libbey Pinnacle Beverage 2532', 'ly-libbey-pinnacle-beverage-2532', 6, '<a href=\"error.html\">Ly Libbey Pinnacle Beverage 2532</a>', 20000, 0, 25, 0, '1747891305_ly1.jpg', 0, 1, '2025-05-22 05:21:45', '2025-05-22 05:21:45'),
+(45, 'Luminarc Highball 28 - J4508 màu Hồng', 'luminarc-highball-28-j4508-mau-hong', 6, '<a href=\"error.html\">Luminarc Highball 28 - J4508 m&agrave;u Hồng</a>', 25000, 0, 100, 1, '1747891443_ly2.jpg', 0, 1, '2025-05-22 05:24:03', '2025-05-22 06:38:15'),
+(46, 'Luminarc Highball 28 - J4506 màu xanh', 'luminarc-highball-28-j4506-mau-xanh', 6, '<a href=\"error.html\">Luminarc Highball 28 - J4506 m&agrave;u xanh</a>', 25000, 0, 100, 0, '1747891487_ly3.jpg', 0, 1, '2025-05-22 05:24:47', '2025-05-22 05:24:47'),
+(47, 'Hộp quà Giàu có', 'hop-qua-giau-co', 7, '<a href=\"error.html\">Hộp qu&agrave; Gi&agrave;u c&oacute;</a>', 690000, 469000, 20, 0, '1747891576_gift.jpg', 0, 1, '2025-05-22 05:26:16', '2025-05-22 05:26:16'),
+(48, 'Hộp quà LEGEND', 'hop-qua-legend', 7, '<a href=\"error.html\">Hộp qu&agrave; LEGEND</a>', 584000, 499000, 12, 0, '1747891608_gift2.jpg', 0, 1, '2025-05-22 05:26:48', '2025-05-22 05:26:48'),
+(49, 'Hộp quà Tết Cafe G7 Gold 2025', 'hop-qua-tet-cafe-g7-gold-2025', 7, '<a href=\"error.html\">Hộp qu&agrave; Tết Cafe G7 Gold 2025</a>', 560000, 499000, 20, 0, '1747891635_gift_G7.jpg', 0, 1, '2025-05-22 05:27:15', '2025-05-22 05:27:15'),
+(50, 'Bộ sản phẩm văn minh cà phê Roman', 'bo-san-pham-van-minh-ca-phe-roman', 7, '<a href=\"error.html\">Bộ sản phẩm văn minh c&agrave; ph&ecirc; Roman</a>', 4299000, 4199000, 20, 0, '1747891807_gift5.jpg', 0, 1, '2025-05-22 05:30:07', '2025-05-22 05:30:07'),
+(51, 'Bộ sản phẩm The Spirit Of Philosophy', 'bo-san-pham-the-spirit-of-philosophy', 7, '<a href=\"error.html\">Bộ sản phẩm The Spirit Of Philosophy</a>', 999000, 0, 25, 0, '1747891869_gift4.jpg', 0, 1, '2025-05-22 05:31:09', '2025-05-22 05:31:09'),
+(53, 'Cà phê Trung Nguyên Legend Success 3', 'ca-phe-trung-nguyen-legend-success-3', 7, '<a href=\"error.html\">C&agrave; ph&ecirc; Trung Nguy&ecirc;n Legend Success 3</a>', 154000, 0, 15, 0, '1747892237_success3.jpg', 0, 1, '2025-05-22 05:37:17', '2025-05-22 05:37:17'),
+(54, 'Cà phê Hòa tan G7 Gold Picasso Latte', 'ca-phe-hoa-tan-g7-gold-picasso-latte', 7, '<a href=\"error.html\">C&agrave; ph&ecirc; H&ograve;a tan G7 Gold Picasso Latte</a>', 154000, 0, 15, 0, '1747892374_G7gold.jpg', 0, 1, '2025-05-22 05:39:34', '2025-05-22 05:39:34'),
+(55, 'Trung Nguyên Legend Americano hộp 15 gói x 2g', 'trung-nguyen-legend-americano-hop-15-goi-x-2g', 7, '<a href=\"product_cafe1.html\">Trung Nguy&ecirc;n Legend Americano hộp 15 g&oacute;i x 2g</a>', 90000, 0, 15, 0, '1747892418_legend2.jpg', 0, 1, '2025-05-22 05:40:18', '2025-05-22 05:40:18'),
+(56, 'Cà phê Sáng tạo 1 - 340gr', 'ca-phe-sang-tao-1-340gr', 9, '<a href=\"error.html\">C&agrave; ph&ecirc; S&aacute;ng tạo 1 - 340gr</a>', 90000, 0, 20, 0, '1747892796_rang3.jpg', 0, 1, '2025-05-22 05:46:36', '2025-05-22 05:46:36'),
+(57, 'Cà phê House Blend - 500gr', 'ca-phe-house-blend-500gr', 9, '<a href=\"error.html\">C&agrave; ph&ecirc; House Blend - 500gr</a>', 287280, 0, 10, 0, '1747892870_rang1.jpg', 0, 1, '2025-05-22 05:47:50', '2025-05-22 05:47:50'),
+(58, 'Cà phê I (Khát vọng) - 500gr', 'ca-phe-i-khat-vong-500gr', 9, '<a href=\"error.html\">C&agrave; ph&ecirc; I (Kh&aacute;t vọng) - 500gr</a>', 90000, 0, 20, 0, '1747892909_rang1.jpg', 0, 1, '2025-05-22 05:48:29', '2025-05-22 05:48:29'),
+(59, 'Máy pha café tự động Donggu DSK XL700', 'may-pha-cafe-tu-dong-donggu-dsk-xl700', 9, '<a href=\"error.html\">M&aacute;y pha caf&eacute; tự động Donggu DSK XL700</a>', 68000000, 0, 10, 1, '1747892945_machineVending.jpg', 0, 1, '2025-05-22 05:49:05', '2025-05-22 05:57:16');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reviews`
+-- Cấu trúc bảng cho bảng `reviews`
 --
 
 CREATE TABLE `reviews` (
@@ -1182,7 +1260,7 @@ CREATE TABLE `reviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `reviews`
+-- Đang đổ dữ liệu cho bảng `reviews`
 --
 
 INSERT INTO `reviews` (`review_id`, `user_id`, `pro_id`, `review_rating`, `review_desc`, `created_at`, `updated_at`) VALUES
@@ -1199,7 +1277,7 @@ INSERT INTO `reviews` (`review_id`, `user_id`, `pro_id`, `review_rating`, `revie
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Cấu trúc bảng cho bảng `slider`
 --
 
 CREATE TABLE `slider` (
@@ -1217,18 +1295,19 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `slider`
+-- Đang đổ dữ liệu cho bảng `slider`
 --
 
 INSERT INTO `slider` (`slider_id`, `slider_name`, `slider_desc`, `slider_content`, `slider_url`, `slider_image`, `slider_sorting`, `slider_status`, `slider_change`, `created_at`, `updated_at`) VALUES
-(1, 'Womens style', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'FASHION LIFE', NULL, '1694537860_BANNER-05.jpg', 3, 1, 1, '2021-11-04 04:29:51', '2023-09-12 22:57:40'),
-(3, 'Winter Collection', 'There\'s nothing like trend', 'Collections 2023', NULL, '1694537809_banner-balo-balovietnamdotcom-1605.png', 1, 1, 1, '2021-11-08 09:27:34', '2023-09-12 22:56:49'),
-(4, 'Save up to 60% off', 'There\'s nothing like trend', 'Best Deals', NULL, '1694537838_banner.jpg', 2, 1, 1, '2021-11-08 09:31:03', '2023-09-12 22:57:18');
+(1, 'Womens style', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'FASHION LIFE', NULL, '1694537860_BANNER-05.jpg', 3, 2, 1, '2021-11-04 04:29:51', '2025-05-22 07:40:28'),
+(3, 'Winter Collection', 'There\'s nothing like trend', 'Collections 2023', NULL, '1694537809_banner-balo-balovietnamdotcom-1605.png', 1, 2, 1, '2021-11-08 09:27:34', '2025-05-22 07:39:55'),
+(4, 'Save up to 60% off', 'There\'s nothing like trend', 'Best Deals', NULL, '1694537838_banner.jpg', 2, 2, 1, '2021-11-08 09:31:03', '2025-05-22 07:40:27'),
+(6, '2025', 'Cafe ngon nhất thế gian', 'Trung Nguyen Legend', NULL, '1747899834_1.jpg', 4, 1, 1, '2025-05-22 07:39:50', '2025-05-22 07:43:54');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `statistical`
+-- Cấu trúc bảng cho bảng `statistical`
 --
 
 CREATE TABLE `statistical` (
@@ -1241,7 +1320,7 @@ CREATE TABLE `statistical` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `statistical`
+-- Đang đổ dữ liệu cho bảng `statistical`
 --
 
 INSERT INTO `statistical` (`id_statistic`, `order_date`, `sales`, `profit`, `quantity`, `total_order`) VALUES
@@ -1275,7 +1354,7 @@ INSERT INTO `statistical` (`id_statistic`, `order_date`, `sales`, `profit`, `qua
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -1291,11 +1370,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin', 'admin@gmail.com', '$2y$10$jbGQ/JJlc3pDgYS672pp7OA5llqqvnbyQUzuLA91XjLdBJxFOqP5q', 2, NULL, '2021-11-03 04:26:02', '2023-09-14 07:43:34'),
+(1, 'admin', 'admin', 'admin@gmail.com', '$2y$10$jbGQ/JJlc3pDgYS672pp7OA5llqqvnbyQUzuLA91XjLdBJxFOqP5q', 2, NULL, '2021-11-03 04:26:02', '2025-05-22 07:42:48'),
 (2, 'test', 'test', 'test@gmail.com', '$2y$10$yGv9zg//XHmUuEBp6SDtaOFF6vCH3N42vIYePbkTTR6Wk7RpiAuZS', 1, NULL, '2021-11-04 04:31:50', '2021-11-04 04:31:50'),
 (3, 'user 3', 'user3', 'user3@gmail.com', '$2y$10$yGv9zg//XHmUuEBp6SDtaOFF6vCH3N42vIYePbkTTR6Wk7RpiAuZS', 1, 'Va7tLlVuQsJlAVizDxDYUmkra5Y7GY2VY0zAlgnrBfSMuUYyahrF3MWoOI04', '2021-11-16 08:21:44', '2021-11-16 08:21:44'),
 (4, 'nnn', 'nnn', 'nnn@gmail.com', '$2y$10$jbGQ/JJlc3pDgYS672pp7OA5llqqvnbyQUzuLA91XjLdBJxFOqP5q', 1, '2GIujRbAFaPReK8pyizjyT6YMvHwaUQjOjPe6SQG0JeeFyZZS3jLgEkyVQOb', '2023-09-12 18:45:33', '2023-09-12 18:45:33'),
@@ -1307,7 +1386,7 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `level`, `re
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wards`
+-- Cấu trúc bảng cho bảng `wards`
 --
 
 CREATE TABLE `wards` (
@@ -1320,7 +1399,7 @@ CREATE TABLE `wards` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `wards`
+-- Đang đổ dữ liệu cho bảng `wards`
 --
 
 INSERT INTO `wards` (`xaid`, `name_wards`, `type`, `maqh`, `created_at`, `updated_at`) VALUES
@@ -12500,7 +12579,7 @@ INSERT INTO `wards` (`xaid`, `name_wards`, `type`, `maqh`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wishlist`
+-- Cấu trúc bảng cho bảng `wishlist`
 --
 
 CREATE TABLE `wishlist` (
@@ -12512,7 +12591,7 @@ CREATE TABLE `wishlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wishlist`
+-- Đang đổ dữ liệu cho bảng `wishlist`
 --
 
 INSERT INTO `wishlist` (`wishlist_id`, `pro_id`, `user_id`, `created_at`, `updated_at`) VALUES
@@ -12534,11 +12613,11 @@ INSERT INTO `wishlist` (`wishlist_id`, `pro_id`, `user_id`, `created_at`, `updat
 (28, 4, 1, '2023-09-13 14:45:20', '2023-09-13 14:45:20');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `category`
+-- Chỉ mục cho bảng `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`category_id`),
@@ -12546,58 +12625,58 @@ ALTER TABLE `category`
   ADD KEY `category_category_sub_foreign` (`category_sub`);
 
 --
--- Indexes for table `city`
+-- Chỉ mục cho bảng `city`
 --
 ALTER TABLE `city`
   ADD PRIMARY KEY (`matp`);
 
 --
--- Indexes for table `coupon`
+-- Chỉ mục cho bảng `coupon`
 --
 ALTER TABLE `coupon`
   ADD PRIMARY KEY (`coupon_id`);
 
 --
--- Indexes for table `customer`
+-- Chỉ mục cho bảng `customer`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`customer_id`),
   ADD KEY `customer_code` (`customer_code`);
 
 --
--- Indexes for table `district`
+-- Chỉ mục cho bảng `district`
 --
 ALTER TABLE `district`
   ADD PRIMARY KEY (`maqh`);
 
 --
--- Indexes for table `failed_jobs`
+-- Chỉ mục cho bảng `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gallery`
+-- Chỉ mục cho bảng `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`gallery_id`),
   ADD KEY `gallery_pro_id_foreign` (`pro_id`);
 
 --
--- Indexes for table `migrations`
+-- Chỉ mục cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `order`
+-- Chỉ mục cho bảng `order`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`order_id`),
   ADD KEY `order_code` (`order_code`);
 
 --
--- Indexes for table `orderdetail`
+-- Chỉ mục cho bảng `orderdetail`
 --
 ALTER TABLE `orderdetail`
   ADD PRIMARY KEY (`orderdetail_id`),
@@ -12605,13 +12684,13 @@ ALTER TABLE `orderdetail`
   ADD KEY `order_code` (`order_code`);
 
 --
--- Indexes for table `password_resets`
+-- Chỉ mục cho bảng `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `product`
+-- Chỉ mục cho bảng `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`product_id`),
@@ -12619,7 +12698,7 @@ ALTER TABLE `product`
   ADD KEY `category_id` (`category_id`);
 
 --
--- Indexes for table `reviews`
+-- Chỉ mục cho bảng `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`review_id`),
@@ -12627,19 +12706,19 @@ ALTER TABLE `reviews`
   ADD KEY `reviews_pro_id_foreign` (`pro_id`);
 
 --
--- Indexes for table `slider`
+-- Chỉ mục cho bảng `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`slider_id`);
 
 --
--- Indexes for table `statistical`
+-- Chỉ mục cho bảng `statistical`
 --
 ALTER TABLE `statistical`
   ADD PRIMARY KEY (`id_statistic`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -12647,13 +12726,13 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Indexes for table `wards`
+-- Chỉ mục cho bảng `wards`
 --
 ALTER TABLE `wards`
   ADD PRIMARY KEY (`xaid`);
 
 --
--- Indexes for table `wishlist`
+-- Chỉ mục cho bảng `wishlist`
 --
 ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`wishlist_id`),
@@ -12661,155 +12740,155 @@ ALTER TABLE `wishlist`
   ADD KEY `wishlist_user_id_foreign` (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `category`
+-- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `category_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `city`
+-- AUTO_INCREMENT cho bảng `city`
 --
 ALTER TABLE `city`
   MODIFY `matp` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
--- AUTO_INCREMENT for table `coupon`
+-- AUTO_INCREMENT cho bảng `coupon`
 --
 ALTER TABLE `coupon`
   MODIFY `coupon_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `customer`
+-- AUTO_INCREMENT cho bảng `customer`
 --
 ALTER TABLE `customer`
   MODIFY `customer_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `district`
+-- AUTO_INCREMENT cho bảng `district`
 --
 ALTER TABLE `district`
   MODIFY `maqh` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=974;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT cho bảng `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `gallery`
+-- AUTO_INCREMENT cho bảng `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `gallery_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `gallery_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
--- AUTO_INCREMENT for table `order`
+-- AUTO_INCREMENT cho bảng `order`
 --
 ALTER TABLE `order`
   MODIFY `order_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `orderdetail`
+-- AUTO_INCREMENT cho bảng `orderdetail`
 --
 ALTER TABLE `orderdetail`
   MODIFY `orderdetail_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `product_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT for table `reviews`
+-- AUTO_INCREMENT cho bảng `reviews`
 --
 ALTER TABLE `reviews`
   MODIFY `review_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `slider`
+-- AUTO_INCREMENT cho bảng `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `slider_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `slider_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `statistical`
+-- AUTO_INCREMENT cho bảng `statistical`
 --
 ALTER TABLE `statistical`
   MODIFY `id_statistic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `wards`
+-- AUTO_INCREMENT cho bảng `wards`
 --
 ALTER TABLE `wards`
   MODIFY `xaid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32249;
 
 --
--- AUTO_INCREMENT for table `wishlist`
+-- AUTO_INCREMENT cho bảng `wishlist`
 --
 ALTER TABLE `wishlist`
   MODIFY `wishlist_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `category`
+-- Các ràng buộc cho bảng `category`
 --
 ALTER TABLE `category`
   ADD CONSTRAINT `category_category_sub_foreign` FOREIGN KEY (`category_sub`) REFERENCES `category` (`category_id`);
 
 --
--- Constraints for table `customer`
+-- Các ràng buộc cho bảng `customer`
 --
 ALTER TABLE `customer`
   ADD CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_code`) REFERENCES `order` (`order_code`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `gallery`
+-- Các ràng buộc cho bảng `gallery`
 --
 ALTER TABLE `gallery`
   ADD CONSTRAINT `gallery_pro_id_foreign` FOREIGN KEY (`pro_id`) REFERENCES `product` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `orderdetail`
+-- Các ràng buộc cho bảng `orderdetail`
 --
 ALTER TABLE `orderdetail`
   ADD CONSTRAINT `orderdetail_ibfk_1` FOREIGN KEY (`order_code`) REFERENCES `order` (`order_code`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `orderdetail_pro_id_foreign` FOREIGN KEY (`pro_id`) REFERENCES `product` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `product`
+-- Các ràng buộc cho bảng `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `reviews`
+-- Các ràng buộc cho bảng `reviews`
 --
 ALTER TABLE `reviews`
   ADD CONSTRAINT `reviews_pro_id_foreign` FOREIGN KEY (`pro_id`) REFERENCES `product` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reviews_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `wishlist`
+-- Các ràng buộc cho bảng `wishlist`
 --
 ALTER TABLE `wishlist`
   ADD CONSTRAINT `wishlist_pro_id_foreign` FOREIGN KEY (`pro_id`) REFERENCES `product` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
