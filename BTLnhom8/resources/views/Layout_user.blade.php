@@ -32,6 +32,76 @@
     <!-- Toastr style -->
     <link href="{{ asset('backend/css/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
     @yield('css')
+    <style>
+.add-to-cart {
+  border: 2px solid transparent; /* giả sử mặc định không viền hoặc trong suốt */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #6f4e37; /* nâu cà phê đậm */
+  border-color: #6f4e37; /* đổi viền cùng màu */
+}
+
+.add-to-cart:hover .btn-cart {
+  color: #fff !important; /* chữ trắng nổi bật */
+}
+.button.btn-cart:hover {
+    background-color: #6F4E37 !important; /* màu cà phê */
+    color: white !important;
+    cursor: pointer;
+}
+          .wishcolor {
+        color: red !important;
+    }
+    .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover{
+        background-color:rgb(222, 213, 35) !important;
+    }
+    .typeahead {
+        width: 100%;
+    }
+    /* Thêm hiệu ứng hover chuyển màu nâu */
+    .link-wishlist:hover,
+    .add_Wishlist:hover {
+        color: brown !important;
+        cursor: pointer;
+        .our-features-box {
+    background-color: #D2B48C !important; /* Nâu nhạt */
+    color: white;
+}
+    }
+.our-features-box h3,
+.our-features-box .offer-label {
+    color: white;
+}
+.our-features-box hidden-xs{
+     background-color: #D2B48C; /* Nâu nhạt */
+    color: white;
+}
+   .mega-menu-title {
+    background-color: #8B4513; /* màu cà phê */
+    color: white;
+    padding: 12px 16px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* Đổi màu icon trong tiêu đề */
+.mega-menu-title i {
+    color: white;
+    margin-right: 8px;
+}
+
+/* Đổi màu chữ trong h3 nếu cần */
+.mega-menu-title h3 {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+</style>
 </head>
 
 <body class="cms-index-index cms-home-page">
@@ -159,7 +229,10 @@
                                 <div>
                                     <div class="top-cart-content" id="top-cart-content">
                                         <!--block-subtitle-->
-                                        <ul class="mini-products-list" id="cart-sidebar">
+                                        <ul class="mini-
+                                        
+                                        
+                                        -list" id="cart-sidebar">
                                         </ul>
                                         <!--actions-->
                                         <div class="actions">
@@ -576,210 +649,8 @@
                      <li><a href="404error.html">Trang Lỗi 404</a></li>
                  </ul>
              </li>
-             <li><a href="#">Phụ nữ</a>
-                 <ul>
-                     <li><a href="#">Túi sành điệu</a>
-                         <ul>
-                             <li><a href="grid.html">Túi xách Clutch</a></li>
-                             <li><a href="grid.html">Túi tã</a></li>
-                             <li><a href="grid.html">Túi</a></li>
-                             <li><a href="grid.html">Túi xách Hobo</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Túi đựng vật liệu</a>
-                         <ul>
-                             <li><a href="grid.html">Túi xách đính cườm</a></li>
-                             <li><a href="grid.html">Túi xách vải</a></li>
-                             <li><a href="grid.html">Túi xách</a></li>
-                             <li><a href="grid.html">Túi xách da</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Giày</a>
-                         <ul>
-                             <li><a href="grid.html">Giày bệt</a></li>
-                             <li><a href="grid.html">Dép bệt</a></li>
-                             <li><a href="grid.html">Giày</a></li>
-                             <li><a href="grid.html">Gót chân</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Jwellery</a>
-                         <ul>
-                             <li><a href="grid.html">Vòng tay</a></li>
-                             <li><a href="grid.html">Dây chuyền &amp; Đang chờ</a></li>
-                             <li><a href="grid.html">Mặt dây chuyền</a></li>
-                             <li><a href="grid.html">Ghim &amp; Trâm cài áo</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Váy</a>
-                         <ul>
-                             <li><a href="grid.html">Trang phục giản dị</a></li>
-                             <li><a href="grid.html">Buổi tối</a></li>
-                             <li><a href="grid.html">Nhà thiết kế</a></li>
-                             <li><a href="grid.html">Bữa tiệc</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Đồ bơi</a>
-                         <ul>
-                             <li><a href="grid.html">Đồ bơi</a></li>
-                             <li><a href="grid.html">Quần áo đi biển</a></li>
-                             <li><a href="grid.html">Quần áo</a></li>
-                             <li><a href="grid.html">Bikini</a></li>
-                         </ul>
-                     </li>
-                </ul>
-            </li>
-            <li><a href="grid.html">Đàn ông</a>
-                 <ul>
-                     <li><a href="grid.html">Giày</a>
-                         <ul class="level1">
-                             <li class="level2"><a href="grid.html">Giày thể thao</a></li>
-                             <li class="level2"><a href="grid.html">Giày thường</a></li>
-                             <li class="level2"><a href="grid.html">Giày da</a></li>
-                             <li class="level2"><a href="grid.html">giày vải</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Váy</a>
-                         <ul class="level1">
-                             <li class="level2"><a href="grid.html">Trang phục thường ngày</a></li>
-                             <li class="level2"><a href="grid.html">Buổi tối</a></li>
-                             <li class="level2"><a href="grid.html">Nhà thiết kế</a></li>
-                             <li class="level2"><a href="grid.html">Bữa tiệc</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Áo khoác</a>
-                         <ul class="level1">
-                             <li class="level2"><a href="grid.html">Áo khoác</a></li>
-                             <li class="level2"><a href="grid.html">Áo khoác lịch sự</a></li>
-                             <li class="level2"><a href="grid.html">Áo khoác da</a></li>
-                             <li class="level2"><a href="grid.html">Áo blazer</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="#.html">Đồng hồ</a>
-                         <ul class="level1">
-                             <li class="level2"><a href="grid.html">Fasttrack</a></li>
-                             <li class="level2"><a href="grid.html">Casio</a></li>
-                             <li class="level2"><a href="grid.html">Titan</a></li>
-                             <li class="level2"><a href="grid.html">Tommy-Hilfiger</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Kính râm</a>
-                         <ul class="level1">
-                             <li class="level2"><a href="grid.html">Ray Ban</a></li>
-                             <li class="level2"><a href="grid.html">Fasttrack</a></li>
-                             <li class="level2"><a href="grid.html">Cảnh sát</a></li>
-                             <li class="level2"><a href="grid.html">Oakley</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Phụ kiện</a>
-                         <ul class="level1">
-                             <li class="level2"><a href="grid.html">Ba lô</a></li>
-                             <li class="level2"><a href="grid.html">Ví</a></li>
-                             <li class="level2"><a href="grid.html">Túi đựng máy tính xách tay</a></li>
-                             <li class="level2"><a href="grid.html">Thắt lưng</a></li>
-                         </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="grid.html">Điện tử</a>
-                 <ul>
-                     <li><a href="grid.html"><span>Điện thoại di động</span></a>
-                         <ul>
-                             <li><a href="grid.html"><span>Samsung</span></a></li>
-                             <li><a href="grid.html"><span>Nokia</span></a></li>
-                             <li><a href="grid.html"><span>iPhone</span></a></li>
-                             <li><a href="grid.html"><span>Sony</span></a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html"><span>Phụ kiện</span></a>
-                         <ul>
-                             <li><a href="grid.html"><span>Thẻ nhớ di động</span></a></li>
-                             <li><a href="grid.html"><span>Trường hợp &amp; Bìa</span></a></li>
-                             <li><a href="grid.html"><span>Tai nghe di động</span></a></li>
-                             <li><a href="grid.html"><span>Tai nghe Bluetooth</span></a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html"><span>Máy ảnh</span></a>
-                         <ul>
-                             <li><a href="grid.html"><span>Máy quay</span></a></li>
-                             <li><a href="grid.html"><span>Điểm &amp; Bắn</span></a></li>
-                             <li><a href="grid.html"><span>SLR kỹ thuật số</span></a></li>
-                             <li><a href="grid.html"><span>Phụ kiện máy ảnh</span></a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html"><span>Âm thanh &amp; Video</span></a>
-                         <ul>
-                             <li><a href="grid.html"><span>Máy nghe nhạc MP3</span></a></li>
-                             <li><a href="grid.html"><span>iPod</span></a></li>
-                             <li><a href="grid.html"><span>Loa</span></a></li>
-                             <li><a href="grid.html"><span>Trình phát video</span></a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html"><span>Máy tính</span></a>
-                         <ul>
-                             <li><a href="grid.html"><span>Đĩa cứng ngoài</span></a></li>
-                             <li><a href="grid.html"><span>Ổ đĩa treo</span></a></li>
-                             <li><a href="grid.html"><span>Tai nghe</span></a></li>
-                             <li><a href="grid.html"><span>Các thành phần PC</span></a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html"><span>Thiết bị gia dụng</span></a>
-                         <ul>
-                             <li><a href="grid.html"><span>Máy hút bụi</span></a></li>
-                             <li><a href="grid.html"><span>Chiếu sáng trong nhà</span></a></li>
-                             <li><a href="grid.html"><span>Dụng cụ nhà bếp</span></a></li>
-                             <li><a href="grid.html"><span>Máy lọc nước</span></a></li>
-                         </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="grid.html">Đồ nội thất</a>
-                 <ul>
-                     <li><a href="grid.html">Phòng khách</a>
-                         <ul>
-                             <li><a href="grid.html">Giá đỡ &amp; Tủ</a></li>
-                             <li><a href="grid.html">Ghế sofa</a></li>
-                             <li><a href="grid.html">Ghế</a></li>
-                             <li><a href="grid.html">Bảng</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Ăn uống &amp; thanh</a>
-                         <ul>
-                             <li><a href="grid.html">Bộ bàn ăn</a></li>
-                             <li><a href="grid.html">Xe đẩy phục vụ</a></li>
-                             <li><a href="grid.html">Quầy bar</a></li>
-                             <li><a href="grid.html">Tủ ăn</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Phòng ngủ</a>
-                         <ul>
-                             <li><a href="grid.html">Giường</a></li>
-                             <li><a href="grid.html">Tủ ngăn kéo</a></li>
-                             <li><a href="grid.html">Tủ quần áo &amp; Almirahs</a></li>
-                             <li><a href="grid.html">Bàn ngủ</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="grid.html">Nhà bếp</a>
-                         <ul>
-                             <li><a href="grid.html">Giá đỡ nhà bếp</a></li>
-                             <li><a href="grid.html">Chất độn nhà bếp</a></li>
-                             <li><a href="grid.html">Đơn vị tường</a></li>
-                             <li><a href="grid.html">Ghế &amp; Ghế đẩu</a></li>
-                         </ul>
-                     </li>
-                 </ul>
-             </li>
-             <li><a href="grid.html">Trẻ em</a></li>
-             <li><a href="contact-us.html">Liên hệ với chúng tôi</a></li>
-         </ul>
-         <div class="top-links">
-             <ul class="links">
-                 <li><a title="My Account" href="login.html">Tài khoản của tôi</a></li>
-                 <li><a title="Wishlist" href="wishlist.html">Danh sách mong muốn</a></li>
-                 <li><a title="Checkout" href="checkout.html">Thanh toán</a></li>
-                 <li><a title="Blog" href="blog.html"><span>Blog</span></a></li>
-                 <li class="last"><a title="Login" href="login.html"><span>Đăng nhập</span></a></li>
-             </ul>
-         </div>
+           
+           
     </div>
     @foreach ($product_modal as $pro_show)
     @php

@@ -46,22 +46,20 @@
 
                                     <!-- Item -->
                                     <div class="item"> <a href="#"><img alt=""
-                                                src="{{ asset('frontend/images/category-img1.jpg') }}"></a>
+                                                src="{{ asset('frontend/images/anhanh.png') }}"></a>
                                                 <div class="cat-img-title cat-bg cat-box">
-                                             <div class="small-tag">Thời trang 2016</div>
-                                             <h2 class="cat-heading">Bộ sưu tập dành cho nữ</h2>
-                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elite. </p>
+                                             <div class="small-tag" style="color: #6F4E37;" >Trung Nguyen Legend</div>
+                                            
                                          </div>
                                      </div>
                                      <!-- Mục Kết thúc -->
 
                                      <!-- Mục -->
                                      <div class="item"><a href="#"><img alt=""
-                                     src="{{ asset('frontend/images/category-img2.jpg') }}"></a>
+                                     src="{{ asset('frontend/images/anhbanner.png') }}"></a>
                                          <div class="cat-img-title cat-bg cat-box">
-                                             <div class="small-tag">Phong cách đường phố</div>
-                                             <h2 class="cat-heading">Mùa mới</h2>
-                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elite. </p>
+                                             <div class="small-tag">Trung Nguyen Legend</div>
+                                            
                                          </div>
                                          <!-- Mục Kết thúc -->
 
@@ -76,7 +74,7 @@
                     <!--	///*///======    End article  ========= //*/// -->
                 </div>
                 <aside class="col-left sidebar col-md-3 col-sm-4 col-xs-12 col-sm-pull-8 col-md-pull-9">
-                    <div class="side-banner"><img src="{{ asset('frontend/images/side-banner.jpg') }}" alt="banner">
+                    <div class="side-banner"><img src="{{ asset('frontend/images/2.jpg') }}" alt="banner">
                     </div>
 
                     <div class="block block-compare" id="loadare">
@@ -96,7 +94,7 @@
                                         </ol>
                                         <div class="carousel-inner">
                                             <div class="item active"> <img
-                                                    src="{{ asset('frontend/images/custom-slide1.jpg') }}" alt="slide3">
+                                                    src="{{ asset('frontend/images/anh1.webp') }}" alt="slide3">
                                                     <div class="carousel-caption"> <span>Siêu ưu đãi lớn</span>
                                                      <p>Tiết kiệm tới <strong>GIẢM GIÁ 70%</strong> Bộ sưu tập Fahion</p>
                                                  </div>
@@ -128,14 +126,13 @@
                          <div class="block-content">
                              <ol id="recently-viewed-items">
                                  <li class="item lẻ">
-                                     <p class="product-name"><a href="#"> Ghế bành có tay bọc mép hình hộp</a></p>
+                                     <p class="product-name"><a href="#">Cà phê G7 Gold Picasso Latte</a></p>
                                  </li>
                                  <li class="item chẵn">
-                                     <p class="product-name"><a href="#">Giày ngủ bọc nệm Pearce</a></p>
+                                     <p class="product-name"><a href="#">Cà phê G7 3in1 - Bịch 50 sticks</a></p>
                                  </li>
                                  <li class="mục lẻ cuối cùng">
-                                     <p class="product-name"><a href="#"> Sofa bọc nỉ
-                                             Đệm</a></p>
+                                     <p class="product-name"><a href="#">Trung Nguyên Legend</a></p>
                                  </li>
                              </ol>
                          </div>
@@ -144,30 +141,30 @@
                          <div class="block-title">Thăm dò ý kiến cộng đồng </div>
                         <form id="pollForm" action="#" method="post" onSubmit="return validatePollAnswerIsSelected();">
                             <div class="block-content">
-                                <p class="block-subtitle">What is your favorite Magento feature?</p>
+                                <p class="block-subtitle">What is your favorite coffee?</p>
                                 <ul id="poll-answers">
                                     <li class="odd">
                                     <input type="radio" name="vote" class="radio poll_vote" id="vote_5" value="5">
                                          <span class="label">
-                                             <label for="vote_5">Điều hướng theo lớp</label>
+                                             <label for="vote_5">Cappuccino Coconut</label>
                                          </span>
                                      </li>
                                      <li class="even">
                                          <input type="radio" name="vote" class="radio poll_vote" id="vote_6" value="6">
                                          <span class="label">
-                                             <label for="vote_6">Quy tắc giá</label>
+                                             <label for="vote_6">G7 Gold Picasso Latte</label>
                                          </span>
                                      </li>
                                      <li class="lẻ">
                                          <input type="radio" name="vote" class="radio poll_vote" id="vote_7" value="7">
                                          <span class="label">
-                                             <label for="vote_7">Quản lý danh mục</label>
+                                             <label for="vote_7">Legend Classic </label>
                                          </span>
                                      </li>
                                      <li class="chẵn cuối cùng">
                                          <input type="radio" name="vote" class="radio poll_vote" id="vote_8" value="8">
                                          <span class="label">
-                                             <label for="vote_8">So sánh sản phẩm</label>
+                                             <label for="vote_8">Legend Success 3</label>
                                          </span>
                                      </li>
                                  </ul>

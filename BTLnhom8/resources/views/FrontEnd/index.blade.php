@@ -77,7 +77,7 @@
                                             @if (count($all_product) > 0)
                                             <div class="category-products">
                                                 <ul class="products-grid">
-                                                    @foreach ($all_product as $item)
+                                                   @foreach ($all_product->take(6) as $item)
                                                     <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                                         <div class="item-inner">
                                                             <div class="item-img">
@@ -183,8 +183,9 @@
                                         @foreach($new_category as $new_cate)
                                         @php
                                             $new_product = App\Products::where('product_status',1)
-                                            ->where('category_id',$new_cate->category_id)
-                                            ->get();
+                                              ->where('category_id',$new_cate->category_id)
+                                              ->take(6)
+                                              ->get();
                                         @endphp
 
                                         <div class="tab-panel" id="tab-{{$new_cate->category_id}}">
