@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicons Icon -->
     
-    <title>Thoi trang - @yield('title')</title>
+    <title>The Cafe Land </title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,9 +26,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/jquery.mobile-menu.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/style.css') }}" media="all">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/revslider.css') }}">
-    <!-- Google Fonts -->
+    <!-- Google Fonts 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600,800,400' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'> -->
+    <!-- Nhúng font Roboto  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
     <!-- Toastr style -->
     <link href="{{ asset('backend/css/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
     @yield('css')
@@ -145,7 +148,7 @@
                                 </ul>
                             </div>
                             <!-- End Header Currency -->
-                            <div class="welcome-msg">trang web mua sắm</div>
+                            <!--<div class="welcome-msg">Trang web mua sắm</div>-->
                         </div>
                         <!-- Header Top Links -->
                         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 pull-right hidden-xs">
@@ -199,7 +202,7 @@
                         <!-- Header Logo -->
                         <div class="logo">
                             <a title="Linea HTML Template" href="{{ route('home') }}"><img alt="Linea HTML"
-                                    src="{{ asset('frontend/images/logo.png') }}"> </a>
+                                    src="{{ asset('frontend/images/logo_ver2.png') }}"> </a>
                         </div>
                         <!-- End Header Logo -->
                     </div>
